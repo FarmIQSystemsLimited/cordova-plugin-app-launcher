@@ -409,6 +409,7 @@ public class Launcher extends CordovaPlugin {
 			public void run() {
 				Intent intent = new Intent(Intent.ACTION_VIEW);
 				intent.setData(Uri.parse(uri));
+				intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 				if (flags != 0) {
 					intent.setFlags(flags);
 				}
